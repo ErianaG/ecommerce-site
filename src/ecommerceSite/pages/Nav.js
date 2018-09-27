@@ -1,4 +1,5 @@
 import React from 'react';
+import auth0Client from '../../auth';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
@@ -20,8 +21,13 @@ const Nav = () => {
                     </ul>
                     <ul className="topNav--right">
                         <li><NavLink to="#"><i className="fa fa-search fa-lg fa-fw" aria-label="search"></i></NavLink></li>
-                        <li><NavLink to="#"><i className="fa fa-user-o fa-lg fa-fw" aria-label="admin sign in"></i></NavLink></li>
                         <li><NavLink to="#"><i className="fa fa-shopping-cart fa-lg fa-fw" aria-label="shopping cart"></i></NavLink></li>
+                        {!auth0Client.isAuthenticated() && (
+                            <button onClick={auth0Client.signIn} >Log In</button>
+                        )}
+                        {auth0Client.isAuthenticated() && (
+                            <button onClick={auth0Client.signOut} >Log Out</button>
+                        )}
                     </ul>
                 </nav>
             </div>
