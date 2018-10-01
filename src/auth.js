@@ -4,9 +4,9 @@ class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
       // the following three lines MUST be updated
-      domain: 'roadtohire.auth0.com',
-      audience: 'https://roadtohire.auth0.com/userinfo',
-      clientID: 'uGUR7NAHHYFRUOL7aIGTkjUnSOfLcZhF',
+      domain: 'nostrings.auth0.com',
+      audience: 'https://nostrings.auth0.com/userinfo',
+      clientID: '0iUyeJB6qoFOnWm9GgvzjBjIulCKf6Ef',
       redirectUri: 'http://localhost:3000/callback',
       responseType: 'token id_token',
       scope: 'openid profile'

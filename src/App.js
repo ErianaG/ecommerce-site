@@ -6,7 +6,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './ecommerceSite/pages/home/Home';
 import Products from './ecommerceSite/pages/products/Products';
 import Contact from './ecommerceSite/pages/contact/Contact';
+import Admin from './ecommerceSite/pages/admin/Admin';
 import ProductCard from './ecommerceSite/pages/products/ProductCard';
+import Callback from './Callback';
+import SecuredRoute from './SecuredRoute';
 
 class App extends Component {
   constructor() {
@@ -81,7 +84,8 @@ class App extends Component {
             <Route path="/" component={Home} exact />
             <Route path="/products" render={() => <Products filterHandler={this.filterHandler} guitars={this.state.guitars} guitarFull={this.state.guitarFull} filteredProducts={this.state.filteredProducts} callback={this.callback} /> } />
             <Route path="/contact" component={Contact} exact />
-            {/* <Route path="/admin" /> */}
+            <Route exact path='/callback' component={Callback}/>
+            <SecuredRoute exact path='/Admin' component={Admin} guitars={this.state.guitars} />
           </Switch>
           <Footer />
         </div>

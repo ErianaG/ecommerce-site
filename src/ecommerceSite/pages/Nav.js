@@ -18,15 +18,16 @@ const Nav = () => {
                         <li>
                             <NavLink to="/contact" exact>Contact</NavLink>
                         </li>
+                        {auth0Client.isAuthenticated() ? <li><NavLink to="/Admin">Admin</NavLink></li> : null}
                     </ul>
                     <ul className="topNav--right">
                         <li><NavLink to="#"><i className="fa fa-search fa-lg fa-fw" aria-label="search"></i></NavLink></li>
                         <li><NavLink to="#"><i className="fa fa-shopping-cart fa-lg fa-fw" aria-label="shopping cart"></i></NavLink></li>
                         {!auth0Client.isAuthenticated() && (
-                            <button onClick={auth0Client.signIn} >Log In</button>
+                            <button className="logButton" onClick={auth0Client.signIn} >Log In</button>
                         )}
                         {auth0Client.isAuthenticated() && (
-                            <button onClick={auth0Client.signOut} >Log Out</button>
+                            <button className="logButton" onClick={auth0Client.signOut} >Log Out</button>
                         )}
                     </ul>
                 </nav>

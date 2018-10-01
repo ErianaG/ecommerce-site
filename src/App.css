@@ -151,6 +151,14 @@ ul {
   z-index: 1;
 }
 
+.logButton {
+  width: 100px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
 /* FOOTER STYLES */
 
 footer {
@@ -428,6 +436,49 @@ label {
 }
 ::placeholder {
   font-size: 15px;
+}
+
+/* ADMIN PAGE STYLES */
+
+.adminCard {
+  display: grid;
+  grid-template-columns: repeat(6, 2fr);
+  width: 80%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12), 0 1px 20px rgba(0,0,0,0.24);
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  margin: 25px auto;
+}
+
+.adminCard h4 {
+  font-size: 20px;
+}
+
+.adminCard img {
+  object-fit: contain;
+  height: 200px;
+  width: 80%;
+}
+
+.adminCard p, h4, .admin--buttons {
+  margin: auto 0;
+}
+
+.product--description {
+  font-size: 15px;
+}
+
+.admin--header {
+  margin-top: 10%;
+}
+
+.add--button {
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+  background-color: #222;
 }
 
 /* MEDIA QUERIES */

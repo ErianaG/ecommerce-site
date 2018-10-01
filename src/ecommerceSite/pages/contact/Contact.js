@@ -10,26 +10,26 @@ const Contact = () => {
                 </div>
             </div>
             <div className="contactForm--box">
-                <form className="contactForm" name="contactForm" action="#" method="post"> 
+                <form className="contactForm" name="contactForm" action="http://localhost:3005/users" method="post"> 
                     <div className="contactForm--input">
-                        <label for="name">First Name:</label>
-                        <input id="name" type="text" name="name" value="" placeholder="Type your full name here" />
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" name="name" placeholder="Type your full name here" />
                     </div>
                     <div className="contactForm--input">
                         <label for="email">Email:</label>
-                        <input id="email" type="text" name="email" value="" placeholder="Email" />
+                        <input id="email" type="text" name="email" placeholder="Email" />
                     </div>
                     <div className="contactForm--input">
                         <label for="phone">Phone:</label>
-                        <input id="phone" type="text" name="phone" value="" placeholder="Phone" />
+                        <input id="phone" type="text" name="phone" placeholder="Phone" />
                     </div>
                     <div className="contactForm--input">
                         <label for="dropdown">Subject:</label>
                         <select id="dropdown" name="dropdown">
-                            <option value="">What Do You Need Help With?</option>
-                            <option value="">Item Came Defective/Want to Return</option>
-                            <option value="">Can't Find Item/Item Delivery is Late</option>
-                            <option value="other">Other</option>
+                            <option>What Do You Need Help With?</option>
+                            <option>Item Came Defective/Want to Return</option>
+                            <option>Can't Find Item/Item Delivery is Late</option>
+                            <option>Other</option>
                         </select>
                     </div>
                     <div className="contactForm--input">
